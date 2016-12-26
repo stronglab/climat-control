@@ -64,8 +64,6 @@ void ServControl(int step, int type) {
 void Calibrate() {
   int lowPosition = digitalRead(lowServPositionPin);
   int hightPosition = digitalRead(hightServPositionPin);
-  Serial.print("\n");
-  Serial.print(lowPosition);
   for (size_t i = 0; i < 180; i++) {
     TempUp(1);
     if (lowPosition == HIGHT) {
